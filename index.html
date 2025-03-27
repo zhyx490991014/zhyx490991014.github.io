@@ -1,1 +1,170 @@
-Hello World
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>你的名字 | 主页</title>
+    <style>
+        /* 基础样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+
+        /* 导航栏 */
+        .navbar {
+            background: rgba(255,255,255,0.95);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #2d3436;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #0984e3;
+        }
+
+        /* 主体内容 */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* 简介板块 */
+        .hero {
+            text-align: center;
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #74b9ff, #0984e3);
+            color: white;
+            border-radius: 1rem;
+            margin: 2rem 0;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* 项目展示 */
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .project-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* 联系方式 */
+        .contact {
+            text-align: center;
+            padding: 3rem 0;
+            background: #2d3436;
+            color: white;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border: 1px solid white;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="#home">首页</a></li>
+            <li><a href="#projects">项目</a></li>
+            <li><a href="#contact">联系</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section class="hero" id="home">
+            <h1>你好，我是[你的名字]</h1>
+            <p>前端开发者 | 技术爱好者</p>
+            <p style="margin-top:1rem; opacity:0.9;">专注于创造优雅高效的Web解决方案</p>
+        </section>
+
+        <section id="projects">
+            <h2>精选项目</h2>
+            <div class="projects">
+                <div class="project-card">
+                    <h3>项目一</h3>
+                    <p>项目描述文字，简要说明项目的功能和技术栈。</p>
+                    <a href="#">查看项目 →</a>
+                </div>
+                <div class="project-card">
+                    <h3>项目二</h3>
+                    <p>项目描述文字，简要说明项目的功能和技术栈。</p>
+                    <a href="#">查看项目 →</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <section class="contact" id="contact">
+        <h2>保持联系</h2>
+        <div class="social-links">
+            <a href="mailto:your@email.com">发送邮件</a>
+            <a href="https://github.com/yourprofile">GitHub</a>
+            <a href="https://linkedin.com/in/yourprofile">LinkedIn</a>
+        </div>
+    </section>
+</body>
+</html>
